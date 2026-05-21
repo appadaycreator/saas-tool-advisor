@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>フリーランス・副業向けSaaS・ツール診断 | あなたに最適な業務ツールを提案</title>
+  <meta name="description" content="5つの質問でフリーランス・副業に最適なSaaSツールを診断。タスク管理・請求書・会計・デザイン・コミュニケーションカテゴリ別に無料・有料ツールをご提案。">
+  <link rel="canonical" href="https://appli-hub.com/saas-tool-advisor/">
+
+  <!-- OGP -->
+  <meta property="og:title" content="フリーランス・副業向けSaaS・ツール診断 | あなたに最適な業務ツールを提案">
+  <meta property="og:description" content="5つの質問でフリーランス・副業に最適なSaaSツールを診断。タスク管理・請求書・会計・デザイン・コミュニケーションカテゴリ別に無料・有料ツールをご提案。">
+  <meta property="og:url" content="https://appli-hub.com/saas-tool-advisor/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://appli-hub.com/saas-tool-advisor/ogp.png">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "フリーランス・副業向けSaaS・ツール診断",
+    "description": "職種・悩み・予算からフリーランスに最適なSaaSツールを診断するWebアプリ",
+    "url": "https://appli-hub.com/saas-tool-advisor/",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "All",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" }
+  }
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TXQGZRF9');</script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8427583028015858" crossorigin="anonymous"></script>
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","s3t9vl8h3v");</script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    window.onerror = function(msg, src, line, col, err) {
+      console.error('[ERROR]', msg, src, line, col, err);
+      return false;
+    };
+    window.addEventListener('unhandledrejection', function(e) {
+      console.error('[UNHANDLED REJECTION]', e.reason);
+    });
+  </script>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+
+  <!-- GTM noscript -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXQGZRF9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- Header -->
+  <header class="bg-indigo-700 text-white py-4 px-4 shadow-md">
+    <div class="max-w-2xl mx-auto">
+      <div class="flex items-center gap-2">
+        <span class="text-3xl">🛠️</span>
+        <div>
+          <h1 class="text-lg font-bold leading-tight">フリーランス・副業向け<br>SaaS・ツール診断</h1>
+          <p class="text-indigo-200 text-sm">5つの質問で最適なビジネスツールを提案</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-2xl mx-auto px-4 py-8">
+
+    <!-- Intro -->
+    <div class="bg-white rounded-2xl shadow p-6 mb-6">
+      <p class="text-gray-600 text-sm leading-relaxed">フリーランス・副業で生産性を上げるには、<strong class="text-indigo-700">適切なSaaSツール選び</strong>が重要です。職種・悩み・チーム規模・予算から、あなたに合うツールをカテゴリ別にご提案します。</p>
+    </div>
+
+    <!-- Quiz -->
+    <div id="quiz-section">
+      <div class="bg-white rounded-2xl shadow p-6 mb-4">
+        <div class="flex justify-between items-center mb-4">
+          <span class="text-sm text-indigo-600 font-semibold" id="step-label">質問 1 / 5</span>
+          <div class="w-32 bg-gray-200 rounded-full h-2">
+            <div id="progress-bar" class="bg-indigo-600 h-2 rounded-full transition-all duration-300" style="width:20%"></div>
+          </div>
+        </div>
+        <div id="question-area"></div>
+      </div>
+
+      <div class="flex gap-3">
+        <button id="prev-btn" onclick="prevStep()" class="hidden flex-1 py-3 bg-gray-200 text-gray-700 rounded-xl font-semibold hover:bg-gray-300 transition">戻る</button>
+        <button id="next-btn" onclick="nextStep()" class="flex-1 py-3 bg-indigo-600 text-white rounded-xl font-semibold hover:bg-indigo-700 transition">次へ</button>
+      </div>
+    </div>
+
+    <!-- Result -->
+    <div id="result-section" class="hidden">
+      <div class="bg-white rounded-2xl shadow p-6 mb-6">
+        <h2 class="text-xl font-bold text-indigo-700 mb-4">診断結果：おすすめツール5選</h2>
+        <div id="result-content"></div>
+      </div>
+
+      <!-- Affiliate CTAs -->
+      <div class="bg-indigo-50 border border-indigo-200 rounded-2xl p-5 mb-4">
+        <h3 class="font-bold text-indigo-800 mb-2">クラウド会計ソフトで確定申告を楽に</h3>
+        <p class="text-sm text-gray-600 mb-3">フリーランスの確定申告は会計ソフトで大幅に時短。青色申告65万円控除も自動対応。今すぐ無料トライアル開始。</p>
+        <a href="A8_ACCOUNTING_TOOL_URL_PLACEHOLDER" target="_blank" rel="noopener noreferrer" class="block w-full text-center py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl transition">
+          クラウド会計ソフトを無料で試す
+        </a>
+      </div>
+
+      <div class="bg-violet-50 border border-violet-200 rounded-2xl p-5 mb-6">
+        <h3 class="font-bold text-violet-800 mb-2">デザインツールでクリエイティブを強化</h3>
+        <p class="text-sm text-gray-600 mb-3">提案書・SNS・資料作成をスマートに。プロ品質のデザインが誰でも簡単に作れるツールを試してみよう。</p>
+        <a href="A8_DESIGN_TOOL_URL_PLACEHOLDER" target="_blank" rel="noopener noreferrer" class="block w-full text-center py-3 bg-violet-600 hover:bg-violet-700 text-white font-bold rounded-xl transition">
+          デザインツールを無料で試す
+        </a>
+      </div>
+
+      <div class="bg-gray-50 border border-gray-200 rounded-2xl p-5 mb-4">
+        <h3 class="font-bold text-gray-800 mb-2">ビジネス書・スキルアップ本をAmazonで探す</h3>
+        <p class="text-sm text-gray-600 mb-3">フリーランスのノウハウ・マーケティング・会計の書籍をAmazonでチェック。Kindle版なら即読み始められます。</p>
+        <a href="https://www.amazon.co.jp/s?k=%E3%83%95%E3%83%AA%E3%83%BC%E3%83%A9%E3%83%B3%E3%82%B9+%E5%89%AF%E6%A5%AD+%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E6%9B%B8&tag=appadaycrea0f-22" target="_blank" rel="noopener noreferrer" class="block w-full text-center py-3 bg-amber-400 hover:bg-amber-500 text-gray-900 font-bold rounded-xl transition">
+          Amazonでフリーランス・副業の書籍を見る
+        </a>
+      </div>
+
+      <button onclick="resetQuiz()" class="w-full py-3 bg-gray-200 text-gray-700 rounded-xl font-semibold hover:bg-gray-300 transition mb-6">もう一度診断する</button>
+    </div>
+
+    <!-- AdSense -->
+    <div class="my-6 text-center">
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8427583028015858" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- Cross-links -->
+    <div class="bg-white rounded-2xl shadow p-6">
+      <h3 class="font-bold text-gray-700 mb-3">フリーランス・副業向けの関連ツール</h3>
+      <div class="grid grid-cols-1 gap-3">
+        <a href="/accounting-software-advisor/" class="flex items-center gap-3 p-3 border border-gray-200 rounded-xl hover:border-indigo-400 transition">
+          <span class="text-2xl">📒</span>
+          <div><p class="font-semibold text-sm">会計ソフト診断</p><p class="text-xs text-gray-500">freee・マネーフォワード等を比較</p></div>
+        </a>
+        <a href="/sidejob-tax-simulator/" class="flex items-center gap-3 p-3 border border-gray-200 rounded-xl hover:border-indigo-400 transition">
+          <span class="text-2xl">🧾</span>
+          <div><p class="font-semibold text-sm">副業税金シミュレーター</p><p class="text-xs text-gray-500">副業収入と確定申告の目安を試算</p></div>
+        </a>
+        <a href="/engineer-career-roadmap/" class="flex items-center gap-3 p-3 border border-gray-200 rounded-xl hover:border-indigo-400 transition">
+          <span class="text-2xl">💻</span>
+          <div><p class="font-semibold text-sm">エンジニアキャリアロードマップ</p><p class="text-xs text-gray-500">スキルアップ・フリーランス転向を支援</p></div>
+        </a>
+        <a href="/taskflow-timer/" class="flex items-center gap-3 p-3 border border-gray-200 rounded-xl hover:border-indigo-400 transition">
+          <span class="text-2xl">⏱️</span>
+          <div><p class="font-semibold text-sm">タスクフロータイマー</p><p class="text-xs text-gray-500">ポモドーロ式で作業効率アップ</p></div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="text-center text-xs text-gray-400 py-6 mt-4">
+    <p>© 2026 AppliHub | <a href="/privacy/" class="underline">プライバシーポリシー</a></p>
+  </footer>
+
+  <script>
+    const questions = [
+      {
+        id: 'job',
+        text: '職種・仕事の種類を教えてください',
+        type: 'radio',
+        options: ['デザイン・クリエイティブ', 'ライティング・編集', 'エンジニア・開発', 'コンサル・ビジネス支援', 'その他（物販・マーケ等）']
+      },
+      {
+        id: 'pain',
+        text: '現在最も困っていることは？',
+        type: 'radio',
+        options: ['時間管理・タスク整理', '請求書・契約書の管理', 'クライアントとのコミュニケーション', 'マーケティング・集客', '収益管理・確定申告']
+      },
+      {
+        id: 'team',
+        text: 'チーム・作業規模はどのくらいですか？',
+        type: 'radio',
+        options: ['一人（完全ソロ）', '2〜5人（小チーム）', '6人以上（複数チーム）']
+      },
+      {
+        id: 'budget',
+        text: '月額ツール予算はどのくらいですか？',
+        type: 'radio',
+        options: ['無料ツールのみ使いたい', '月額5,000円以下', '月額5,000〜20,000円']
+      },
+      {
+        id: 'os',
+        text: '主に使うOSとデバイスは？',
+        type: 'radio',
+        options: ['Mac中心', 'Windows中心', 'スマートフォン中心', 'OS問わず・クロスプラットフォーム']
+      }
+    ];
+
+    const toolDatabase = {
+      task: {
+        icon: '📋',
+        category: 'タスク管理',
+        free: [
+          { name: 'Notion', desc: 'ノート・DB・タスクを一元管理。無料プランで個人利用は十分。', free: true },
+          { name: 'Trello', desc: 'カンバン方式でタスクを視覚的に管理。直感的で初心者にも使いやすい。', free: true }
+        ],
+        paid: [
+          { name: 'ClickUp', desc: 'タスク・時間管理・ドキュメントを統合管理。月額$7〜。', free: false },
+          { name: 'Asana', desc: 'プロジェクト管理の定番。チーム利用も可。月額$10.99〜。', free: false }
+        ]
+      },
+      invoice: {
+        icon: '📄',
+        category: '請求書・契約管理',
+        free: [
+          { name: 'Misoca（弥生）', desc: '無料プランで月3件まで請求書作成。クラウドで管理できる。', free: true },
+          { name: 'Invoice Ocean', desc: '請求書・見積書をクラウドで管理。小規模なら無料で十分。', free: true }
+        ],
+        paid: [
+          { name: 'freee（会計＋請求）', desc: '会計ソフトと一体化。月額1,480円〜。確定申告まで一括対応。', free: false },
+          { name: 'マネーフォワード クラウド請求書', desc: '使いやすいUIで請求書から入金管理まで。月額800円〜。', free: false }
+        ]
+      },
+      communication: {
+        icon: '💬',
+        category: 'コミュニケーション',
+        free: [
+          { name: 'Slack（無料プラン）', desc: 'チャット・ファイル共有の定番。無料でも90日履歴まで。', free: true },
+          { name: 'Discord', desc: '音声通話・画面共有が充実。エンジニア・クリエイターに人気。', free: true }
+        ],
+        paid: [
+          { name: 'Slack（有料）', desc: 'プロプラン月額1,050円〜。履歴無制限・外部連携が充実。', free: false },
+          { name: 'Zoom', desc: 'Web会議の定番。月額1,700円〜。大人数のミーティングも安定。', free: false }
+        ]
+      },
+      design: {
+        icon: '🎨',
+        category: 'デザイン・資料作成',
+        free: [
+          { name: 'Canva（無料）', desc: 'SNS・資料・チラシをテンプレートから簡単作成。非デザイナーでも使える。', free: true },
+          { name: 'Figma（無料）', desc: 'UI/UXデザインの業界標準。無料で3プロジェクトまで。', free: true }
+        ],
+        paid: [
+          { name: 'Adobe Creative Cloud', desc: 'Photoshop・Illustrator・Premiere等の最強セット。月額6,248円〜。', free: false },
+          { name: 'Canva Pro', desc: 'Canvaの有料版。月額1,500円。背景削除・ブランドキット機能が追加。', free: false }
+        ]
+      },
+      accounting: {
+        icon: '💰',
+        category: '会計・確定申告',
+        free: [
+          { name: 'やよいの白色申告 オンライン', desc: '白色申告なら永年無料。シンプルで操作が簡単。', free: true },
+          { name: 'Googleスプレッドシート', desc: '自作の収支管理に。無料だが手動管理が必要。', free: true }
+        ],
+        paid: [
+          { name: 'freee会計', desc: '青色申告に対応。銀行連携で自動仕訳。月額1,480円〜。', free: false },
+          { name: 'マネーフォワード クラウド確定申告', desc: '自動仕訳・e-Tax連携。月額800円〜。', free: false }
+        ]
+      }
+    };
+
+    function getToolCategories() {
+      const pain = answers.pain || '';
+      const job = answers.job || '';
+      const priorityMap = {
+        '時間管理・タスク整理': ['task', 'communication', 'design', 'accounting', 'invoice'],
+        '請求書・契約書の管理': ['invoice', 'accounting', 'task', 'communication', 'design'],
+        'クライアントとのコミュニケーション': ['communication', 'task', 'invoice', 'design', 'accounting'],
+        'マーケティング・集客': ['design', 'communication', 'task', 'accounting', 'invoice'],
+        '収益管理・確定申告': ['accounting', 'invoice', 'task', 'communication', 'design']
+      };
+      return (priorityMap[pain] || ['task', 'invoice', 'communication', 'design', 'accounting']).slice(0, 5);
+    }
+
+    function renderToolCard(tool) {
+      const badge = tool.free
+        ? '<span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-semibold">無料プランあり</span>'
+        : '<span class="text-xs bg-gray-200 text-gray-600 px-2 py-0.5 rounded-full font-semibold">有料のみ</span>';
+      return `<div class="flex items-start gap-3 py-2 border-b border-gray-100 last:border-0">
+        <div class="flex-1"><p class="text-sm font-semibold">${tool.name} ${badge}</p><p class="text-xs text-gray-500 mt-0.5">${tool.desc}</p></div>
+      </div>`;
+    }
+
+    let currentStep = 0;
+    let answers = {};
+
+    function renderQuestion() {
+      const q = questions[currentStep];
+      document.getElementById('step-label').textContent = `質問 ${currentStep + 1} / ${questions.length}`;
+      document.getElementById('progress-bar').style.width = `${((currentStep + 1) / questions.length) * 100}%`;
+      document.getElementById('prev-btn').classList.toggle('hidden', currentStep === 0);
+      document.getElementById('next-btn').textContent = currentStep === questions.length - 1 ? '診断する' : '次へ';
+
+      let html = `<p class="font-semibold text-gray-800 mb-4">${q.text}</p><div class="space-y-2">`;
+      q.options.forEach(opt => {
+        const checked = answers[q.id] === opt ? 'checked' : '';
+        html += `<label class="flex items-center gap-3 p-3 border border-gray-200 rounded-xl cursor-pointer hover:border-indigo-400 transition has-[:checked]:border-indigo-500 has-[:checked]:bg-indigo-50">
+          <input type="radio" name="${q.id}" value="${opt}" ${checked} class="accent-indigo-600"> <span class="text-sm">${opt}</span>
+        </label>`;
+      });
+      html += '</div>';
+      document.getElementById('question-area').innerHTML = html;
+    }
+
+    function saveAnswer() {
+      const el = document.querySelector(`input[name="${questions[currentStep].id}"]:checked`);
+      if (!el) return false;
+      answers[questions[currentStep].id] = el.value;
+      return true;
+    }
+
+    function nextStep() {
+      if (!saveAnswer()) { alert('選択してください'); return; }
+      if (currentStep < questions.length - 1) { currentStep++; renderQuestion(); }
+      else showResult();
+    }
+
+    function prevStep() {
+      if (currentStep > 0) { currentStep--; renderQuestion(); }
+    }
+
+    function showResult() {
+      document.getElementById('quiz-section').classList.add('hidden');
+      document.getElementById('result-section').classList.remove('hidden');
+
+      const categories = getToolCategories();
+      const isFreeOnly = answers.budget === '無料ツールのみ使いたい';
+
+      let html = '';
+      categories.forEach((catKey, i) => {
+        const cat = toolDatabase[catKey];
+        const tools = isFreeOnly ? cat.free : [...cat.free.slice(0, 1), ...cat.paid.slice(0, 1)];
+        html += `<div class="mb-5">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xl">${cat.icon}</span>
+            <h3 class="font-bold text-gray-800">${i + 1}. ${cat.category}</h3>
+          </div>
+          <div class="bg-gray-50 rounded-xl p-3">${tools.map(renderToolCard).join('')}</div>
+        </div>`;
+      });
+
+      if (isFreeOnly) {
+        html += `<div class="bg-green-50 border border-green-200 rounded-xl p-3 mt-2"><p class="text-sm text-green-800"><strong>無料ツール中心</strong>でも十分な機能がそろいます。まずは無料プランでスタートし、業務量が増えてから有料移行を検討しましょう。</p></div>`;
+      }
+
+      document.getElementById('result-content').innerHTML = html;
+    }
+
+    function resetQuiz() {
+      currentStep = 0; answers = {};
+      document.getElementById('quiz-section').classList.remove('hidden');
+      document.getElementById('result-section').classList.add('hidden');
+      renderQuestion();
+    }
+
+    renderQuestion();
+  </script>
+</body>
+</html>
